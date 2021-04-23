@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package go.micro.service.test;
+option go_package="example/helloworld/proto";
+service Test {
+  rpc SayHello(HelloReq) returns (HelloResp) {}
+}
+message HelloReq {
+  string Name = 1;
+}
+message HelloResp{
+  string msg=1;
+}
